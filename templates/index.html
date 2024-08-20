@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/daae8c172a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/style.css')}}"
+    />
+    <title>Upload Document</title>
+  </head>
+  <body>
+    <form action="/chat" method="post" enctype="multipart/form-data" id="form_drop_area">
+      <label for="input-file" id="drop_area">
+        <input type="file" name="file" accept=".pdf" id="input-file" hidden/>
+        <div id="image_view">
+          <img src="{{ url_for('static', filename='upload_icon.png')}}">
+          <p style="margin-top: 50px;">Drag and drop or click here to select</p>
+          <span style="margin-top: 0px;">Upload your documents here</span>
+        </div>
+      </label>
+      <input type="submit" id="input_button" hidden/>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
