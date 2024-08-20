@@ -21,7 +21,9 @@ def index():
 @app.route('/chat', methods = ['POST'])   
 def success():   
     if request.method == 'POST':   
-        f = request.files['file'] 
+        f = request.files['file']
+        if not os.path.exists('files_uploaded'):
+            os.makedirs('files_uploaded')
         f.save(f"files_uploaded/{f.filename}")
 
         fName, fExt = f.filename.split('.')
@@ -42,6 +44,8 @@ def success():
 
         #Extract images and text boxes from pdf
         doc = pymupdf.open(f"files_uploaded/{f.filename}")
+        if not os.path.exists('images_extracted'):
+            os.makedirs('images_extracted')
         for page in doc:
             new_rects = detect_rects(page)
             for i, r in enumerate(new_rects):
