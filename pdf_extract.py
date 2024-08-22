@@ -65,9 +65,12 @@ def success():
 
         return render_template('chat.html')
 
-
+def open_api_file():
+    with open("api_key.txt", "r", encoding='utf-8') as file:
+        return file.read()
+    
 def index_doc(file):
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = open_api_file()
 
     loader = TextLoader(file, encoding='utf-8')
     documents = loader.load()
