@@ -113,14 +113,9 @@ def get_Chat_response(text):
     from dotenv import load_dotenv
     load_dotenv()
     
-    # os.environ['OPENAI_API_KEY']=os.getenv("OPENAI_API_KEY")
     os.environ['OPENAI_API_KEY']='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'
-    # print(os.environ['OPENAI_API_KEY'])
-    # import getpass
-    # import os
-
-    # os.environ["OPENAI_API_KEY"] = getpass.getpass()
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+    
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
     from langchain_community.vectorstores import FAISS
