@@ -21,3 +21,5 @@ Create a file named api_key.txt in the project directory and paste your OpenAI A
 <h2>Usage</h2>
 To run this application: <br/>
 Run the file pdf_extract.py, this will then start the Flask Development server which is hosted locally on your machine, the user then can upload the PDF and ask questions based on the content provided in the PDF.
+<h2>Contribution</h2>
+Contributions to the PDF chatbot are welcome! If you would like to contribute, please fork the repository, make your changes, and submit a pull request. If you find any issues or have suggestions for improvements, please open an issue on the GitHub repository.
