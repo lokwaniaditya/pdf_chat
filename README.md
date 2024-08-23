@@ -17,6 +17,7 @@ Install the required libraries listed in the file requirements.txt
 pip install -r requirements.txt 
 ```
 
-Create a file named openaiapikey.txt in the project directory and paste your OpenAI API key into it. <br/>
+Create a file named api_key.txt in the project directory and paste your OpenAI API key into it. <br/>
 <h2>Usage</h2>
-Run the file pdf_extract.py, this will then start the Flask Development server which is hosted locally on your machine.
+To run this application: <br/>
+Run the file pdf_extract.py, this will then start the Flask Development server which is hosted locally on your machine, the user then can upload the PDF and ask questions based on the content provided in the PDF.
