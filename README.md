@@ -3,6 +3,7 @@
 Extract Data from a PDF in form of Q&A - based on RAG implementation - Ask questions to a chatbot which will retrieve data from the PDF uploaded - A python based application that leverages the capabilities OpenAI's GPT-3.5 LLM to answer questions based on the pdf uploaded by the user. This application uses PymuPDF to extract text, tables and images from the PDF in the matter of a few seconds<br/>
 <h2>Installation</h2>
 Clone the repository: <br/>
+
 ``` 
 git clone https://github.com/lokwaniaditya/pdf_chat.git 
 ```
