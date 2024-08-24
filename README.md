@@ -1,6 +1,6 @@
 <h1>Ask ChatBot questions from uploaded PDF</h1>
 <h2>Overview</h2>
-Extract Data from a PDF in form of Q&A - based on RAG implementation - Ask questions to a chatbot which will retrieve data from the PDF uploaded - A python based application that leverages the capabilities OpenAI's GPT-3.5 LLM to answer questions based on the pdf uploaded by the user. This application uses PymuPDF to extract text, tables and images from the PDF in the matter of a few seconds<br/>
+Extract Data from a PDF in form of Q&A - based on RAG implementation - A python based application that uses flask framework and leverages the capabilities OpenAI's GPT-4o-mini LLM to answer questions based on the pdf uploaded by the user. This application uses PymuPDF to extract text, tables and images (scans images for text) from the PDF in the matter of a few seconds, and then stores that data in a vector database<br/>
 <h2>Installation</h2>
 Clone the repository: <br/>
 
