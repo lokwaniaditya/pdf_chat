@@ -117,7 +117,6 @@ def get_Chat_response(text):
     
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
-
     from langchain_community.vectorstores import FAISS
 
     db = FAISS.load_local("faiss_index", OpenAIEmbeddings(), allow_dangerous_deserialization = True)
