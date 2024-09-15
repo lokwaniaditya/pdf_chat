@@ -18,6 +18,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+def open_api_file():
+    with open("api_key.txt", "r", encoding='utf-8') as file:
+        return file.read()
+
+os.environ["OPENAI_API_KEY"] = open_api_file()
+
 @app.route('/chat', methods = ['POST'])   
 def success():   
     if request.method == 'POST':   
@@ -64,14 +70,8 @@ def success():
         index_doc(f'{fName}.txt')
 
         return render_template('chat.html')
-
-def open_api_file():
-    with open("api_key.txt", "r", encoding='utf-8') as file:
-        return file.read()
     
 def index_doc(file):
-    os.environ["OPENAI_API_KEY"] = open_api_file()
-
     loader = TextLoader(file, encoding='utf-8')
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(
