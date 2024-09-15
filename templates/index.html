@@ -19,9 +19,11 @@
       <label for="input-file" id="drop_area">
         <input type="file" name="file" accept=".pdf" id="input-file" hidden/>
         <div id="image_view">
-          <img src="{{ url_for('static', filename='upload_icon.png')}}">
-          <p style="margin-top: 50px;">Drag and drop or click here to select</p>
-          <span style="margin-top: 0px;">Upload your documents here</span>
+          <div id="main_container">
+            <img src="{{ url_for('static', filename='upload_icon.png')}}">
+            <p style="margin-top: 50px;">Drag and drop or click here to select</p>
+            <span style="margin-top: 0px;">Upload your documents here</span>
+          </div>
         </div>
       </label>
       <input type="submit" id="input_button" hidden/>
