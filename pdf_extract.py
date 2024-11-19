@@ -14,6 +14,7 @@ import pytesseract
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/index')
 @app.route('/index.html')
 def index():
     return render_template('index.html')
@@ -24,7 +25,11 @@ def open_api_file():
 
 os.environ["OPENAI_API_KEY"] = open_api_file()
 
-@app.route('/chat', methods = ['POST'])   
+@app.route('/upload')
+def serve_file():
+    return render_template('upload.html')
+
+@app.route('/chat', methods = ['POST'])
 def success():   
     if request.method == 'POST':   
         f = request.files['file']
